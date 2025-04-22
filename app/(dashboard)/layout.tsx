@@ -18,7 +18,7 @@ import { cn } from "@/lib/utils"
 const navigation = [
   { name: "Tableau de bord", href: "/dashboard", icon: LayoutDashboard },
   // { name: "Nouveau certificat", href: "/certificats/nouveau", icon: FileText },
-  { name: "Liste des certificats", href: "/certificats", icon: ListChecks },
+  { name: "Certificats", href: "/certificats", icon: ListChecks },
   { name: "Rapports", href: "/rapports", icon: BarChart3 },
   { name: "Paramètres", href: "/parametres", icon: Settings },
 ]

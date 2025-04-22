@@ -59,25 +59,25 @@ const item = {
   show: { opacity: 1, y: 0 }
 }
 
-export default function DashboardPage() {
+export default function Home() {
   return (
     <div className="p-6 space-y-8 bg-gray-50/50">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold text-blue-900">
             Tableau de bord
           </h1>
           <p className="text-gray-500 mt-1">Bienvenue sur votre espace de gestion</p>
         </div>
         <div className="flex gap-4">
           <Link href="/certificats/nouveau">
-            <Button className="nsia-gradient hover:opacity-90 transition-opacity">
+            <Button className="bg-[#bc872b] hover:bg-[#a77725] text-white transition-colors">
               <FileText className="h-4 w-4 mr-2" />
               Nouveau Certificat
             </Button>
           </Link>
           <Link href="/rapports">
-            <Button variant="outline" className="border-blue-200 hover:border-blue-300 transition-colors">
+            <Button variant="outline" className="border-[#bc872b] text-[#bc872b] hover:bg-[#bc872b]/10 transition-colors">
               <BarChart3 className="h-4 w-4 mr-2" />
               Voir les rapports
             </Button>
@@ -93,16 +93,16 @@ export default function DashboardPage() {
         className="grid gap-8 md:grid-cols-3"
       >
         <motion.div variants={item} className="md:col-span-2">
-          <Card className="overflow-hidden border-blue-100">
-            <CardHeader className="border-b bg-blue-50/50">
-              <CardTitle className="flex items-center gap-2 text-blue-900">
+          <Card className="overflow-hidden border-[#bc872b]/20">
+            <CardHeader className="border-b bg-[#bc872b]/5">
+              <CardTitle className="flex items-center gap-2 text-[#bc872b]">
                 <Activity className="h-5 w-5" />
                 Aperçu de l'activité
               </CardTitle>
             </CardHeader>
             <CardContent className="p-6">
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
-                <div className="flex items-center p-4 bg-white rounded-xl border border-blue-100">
+                <div className="flex items-center p-4 bg-white rounded-xl border border-[#bc872b]/20">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-green-100">
                     <FileCheck2 className="h-6 w-6 text-green-600" />
                   </div>
@@ -116,7 +116,7 @@ export default function DashboardPage() {
                   </div>
                 </div>
 
-                <div className="flex items-center p-4 bg-white rounded-xl border border-blue-100">
+                <div className="flex items-center p-4 bg-white rounded-xl border border-[#bc872b]/20">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-orange-100">
                     <FileClock className="h-6 w-6 text-orange-600" />
                   </div>
@@ -132,9 +132,9 @@ export default function DashboardPage() {
         </motion.div>
 
         <motion.div variants={item}>
-          <Card className="border-blue-100">
-            <CardHeader className="border-b bg-blue-50/50">
-              <CardTitle className="flex items-center gap-2 text-blue-900">
+          <Card className="border-[#bc872b]/20">
+            <CardHeader className="border-b bg-[#bc872b]/5">
+              <CardTitle className="flex items-center gap-2 text-[#bc872b]">
                 <Bell className="h-5 w-5" />
                 Notifications
               </CardTitle>
@@ -175,9 +175,9 @@ export default function DashboardPage() {
         className="grid gap-8 md:grid-cols-2"
       >
         <motion.div variants={item}>
-          <Card className="border-blue-100">
-            <CardHeader className="border-b bg-blue-50/50">
-              <CardTitle className="text-blue-900">Production Mensuelle</CardTitle>
+          <Card className="border-[#bc872b]/20">
+            <CardHeader className="border-b bg-[#bc872b]/5">
+              <CardTitle className="text-[#bc872b]">Production Mensuelle</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
               <div className="h-[400px]">
@@ -185,7 +185,7 @@ export default function DashboardPage() {
                   data={productionData}
                   categories={["total", "validés", "enAttente", "rejetés"]}
                   index="name"
-                  colors={["#1e40af", "#22c55e", "#f59e0b", "#ef4444"]}
+                  colors={["#bc872b", "#22c55e", "#f59e0b", "#ef4444"]}
                   valueFormatter={(value) => `${value} certificats`}
                 />
               </div>
@@ -194,9 +194,9 @@ export default function DashboardPage() {
         </motion.div>
 
         <motion.div variants={item}>
-          <Card className="border-blue-100">
-            <CardHeader className="border-b bg-blue-50/50">
-              <CardTitle className="text-blue-900">Production par Filiale</CardTitle>
+          <Card className="border-[#bc872b]/20">
+            <CardHeader className="border-b bg-[#bc872b]/5">
+              <CardTitle className="text-[#bc872b]">Production par Filiale</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
               <div className="h-[400px]">
@@ -204,7 +204,7 @@ export default function DashboardPage() {
                   data={filialesData}
                   categories={["total", "validés", "enAttente", "rejetés"]}
                   index="name"
-                  colors={["#1e40af", "#22c55e", "#f59e0b", "#ef4444"]}
+                  colors={["#bc872b", "#22c55e", "#f59e0b", "#ef4444"]}
                   valueFormatter={(value) => `${value} certificats`}
                 />
               </div>
@@ -219,9 +219,9 @@ export default function DashboardPage() {
         initial="hidden"
         animate="show"
       >
-        <Card className="border-blue-100">
-          <CardHeader className="border-b bg-blue-50/50">
-            <CardTitle className="text-blue-900">Actions rapides</CardTitle>
+        <Card className="border-[#bc872b]/20">
+          <CardHeader className="border-b bg-[#bc872b]/5">
+            <CardTitle className="text-[#bc872b]">Actions rapides</CardTitle>
           </CardHeader>
           <CardContent className="p-6">
             <div className="grid gap-4 md:grid-cols-3">
@@ -232,16 +232,16 @@ export default function DashboardPage() {
               ].map((action, index) => (
                 <motion.div key={action.href} variants={item}>
                   <Link href={action.href}>
-                    <div className="group relative overflow-hidden rounded-xl border border-blue-100 bg-white p-4 hover:border-blue-200 transition-all hover:shadow-md">
+                    <div className="group relative overflow-hidden rounded-xl border border-[#bc872b]/20 bg-white p-4 hover:border-[#bc872b]/40 transition-all hover:shadow-md">
                       <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 group-hover:bg-blue-100 transition-colors">
-                          <action.icon className="h-5 w-5 text-blue-700" />
+                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#bc872b]/10 group-hover:bg-[#bc872b]/20 transition-colors">
+                          <action.icon className="h-5 w-5 text-[#bc872b]" />
                         </div>
-                        <span className="font-medium text-gray-700 group-hover:text-blue-700 transition-colors">
+                        <span className="font-medium text-gray-700 group-hover:text-[#bc872b] transition-colors">
                           {action.label}
                         </span>
                       </div>
-                      <ArrowRight className="absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-blue-700 opacity-0 transition-all group-hover:right-3 group-hover:opacity-100" />
+                      <ArrowRight className="absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#bc872b] opacity-0 transition-all group-hover:right-3 group-hover:opacity-100 animate-slide-right" />
                     </div>
                   </Link>
                 </motion.div>
